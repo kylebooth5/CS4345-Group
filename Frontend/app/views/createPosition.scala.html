@@ -1,0 +1,81 @@
+@(authorizeMessage: String)
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Create Position</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+            <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col s12 m6">
+        <header class="topbar">
+            <h1 class="focused" style="font-size: 37px;
+                color: #57a957">
+                <strong>Create Position</strong>
+            </h1>
+        </header>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="card col s4 offset-s4 ">
+                <div class="card-panel">
+                    <form action="@routes.PositionController.positionHandler()" method="GET">
+
+                        <!--create a select statement-->
+                        <div class="row">
+                        <div class="input-field col s12">
+                            <select style = "display: block;" id="course" name="course">
+                                <option value="" disabled selected>Select a Course</option>
+                                <option value="CS 4345">CS 4345</option>
+                                <option value="CS 5382">CS 5382</option>
+                                <option value="CS 5320">CS 5320</option>
+                            </select>
+                        </div>
+                            <div class="row">
+                            <div class="input-field col s12">
+                                <select style = "display: block;" id="preference" name="preference">
+                                    <option value="" disabled selected>TA Preference</option>
+                                    <option value="Under Graduate">Under Graduate</option>
+                                    <option value="Graduate">Graduate</option>
+                                    <option value="Both">Both</option>
+                                </select>
+                            </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+
+                                <input id="numPositions" name="numPositions" type="text" class="validate">
+                                <label for="numPositions">Number of TAs Needed</label>
+                            </div>
+                        </div>
+
+                        @if(authorizeMessage!= null){
+                            <div class="alert alert-primary" role="alert">
+                            @authorizeMessage
+                            </div>
+                            <br>
+                        }
+
+                        <div class="row">
+                            <button id="api-search-button" class="btn col s4 offset-s4" type="submit">Create</button>
+                        </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
