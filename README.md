@@ -1,6 +1,6 @@
 # SMU TA System
 
-_Project By Kyle Booth, Kate Bouis, JP Heck, and Eric Houtman _
+*Project By Kyle Booth, Kate Bouis, JP Heck, and Eric Houtman*
 
 ### Introduction
 This repo is for a software development project created using the Play framework. The project is for a TA Application system, which is a website that both TAs and professors at a university can register for. Professor accounts have permissions to create TA job openings and hire TAs that fit their requirements. TA accounts see these postings and apply to jobs that fit their schedule and experience. 
