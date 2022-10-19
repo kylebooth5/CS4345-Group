@@ -30,8 +30,7 @@ object createPosition extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl
       {
 
 
-Seq[Any](format.raw/*1.28*/("""
-"""),format.raw/*2.1*/("""<!DOCTYPE html>
+Seq[Any](format.raw/*2.1*/("""<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -127,11 +126,11 @@ Seq[Any](format.raw/*1.28*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2022-10-12T16:54:12.744
-                  SOURCE: C:/Users/kyleb/Desktop/Lab-2-Ebean/Frontend/app/views/createPosition.scala.html
-                  HASH: 6cb8b988e0b47b675014e0e460ab763851be96af
-                  MATRIX: 957->1|1078->27|1106->29|2822->1720|2837->1726|2895->1763|4606->3447|4642->3474|4681->3475|4739->3505|4843->3582|4880->3598|4938->3628|5036->3695|5092->3723
-                  LINES: 28->1|33->1|34->2|66->34|66->34|66->34|95->63|95->63|95->63|96->64|97->65|97->65|98->66|100->68|102->70
+                  DATE: 2022-10-18T20:25:24.801
+                  SOURCE: /Users/katebouis/Desktop/cs/cs4345/CS4345-Group-3/Frontend/app/views/createPosition.scala.html
+                  HASH: 25c83c690a1363bd95c7d88aef755510d685c899
+                  MATRIX: 957->1|1077->28|2761->1687|2776->1693|2834->1730|4516->3385|4552->3412|4591->3413|4648->3442|4751->3518|4788->3534|4845->3563|4941->3628|4995->3654
+                  LINES: 28->1|33->2|65->34|65->34|65->34|94->63|94->63|94->63|95->64|96->65|96->65|97->66|99->68|101->70
                   -- GENERATED --
               */
           

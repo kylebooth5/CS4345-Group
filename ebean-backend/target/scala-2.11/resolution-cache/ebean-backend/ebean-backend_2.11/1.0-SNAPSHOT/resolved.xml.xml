@@ -4,7 +4,7 @@
 		module="ebean-backend_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20220902024148"
+		publication="20221018201639"
 	>
 		<description>
 		ebean-backend

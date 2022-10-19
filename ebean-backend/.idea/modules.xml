@@ -4,8 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ebean-backend.iml" filepath="$PROJECT_DIR$/.idea/modules/ebean-backend.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ebean-backend-build.iml" filepath="$PROJECT_DIR$/.idea/modules/ebean-backend-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ebean-backend_722.iml" filepath="$PROJECT_DIR$/.idea/modules/ebean-backend_722.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ebean-backend_722-build.iml" filepath="$PROJECT_DIR$/.idea/modules/ebean-backend_722-build.iml" />
     </modules>
   </component>
 </project>

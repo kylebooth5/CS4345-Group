@@ -3,7 +3,6 @@
 
 # --- !Ups
 
-# below table should have professorID and studentID (initially null until someone applys?
 create table positions (
   id                            bigint auto_increment not null,
   course                        varchar(255),
