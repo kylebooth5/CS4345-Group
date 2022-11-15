@@ -14,3 +14,29 @@ server.pid
 *.eml
 /dist/
 .cache
+.idea/
+
+# backend
+backend/.idea/
+backend/_DS_Store
+backend/logs/
+backend/lib/
+backend/modules
+backend/project/project
+backend/project/target
+backend/target
+backend/db
+backend/dist/
+
+# client
+client/.idea/
+client/_DS_Store
+client/logs/
+client/lib/
+client/modules
+client/project/project
+client/project/target
+client/target
+client/db
+client/dist/
+
