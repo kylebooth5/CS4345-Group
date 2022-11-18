@@ -11,8 +11,11 @@ GET     /signup                     controllers.HomeController.signup()
 
 GET     /createPosition                 controllers.PositionController.createPosition()
 
+GET     /createApplication              controllers.ApplicationController.createApplication()
+
 GET     /register                   controllers.HomeController.signupHandler()
 GET     /create                         controllers.PositionController.positionHandler()
+GET     /createApp                      controllers.ApplicationController.applicationHandler()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
