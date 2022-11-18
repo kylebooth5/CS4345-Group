@@ -3,12 +3,17 @@ package models;
 import com.avaje.ebean.ExpressionList;
 import com.avaje.ebean.Model;
 import play.data.validation.Constraints;
-
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 import java.util.List;
+import java.util.Objects;
+import javax.persistence.*;
+import java.util.Date;
 
 @Entity
+@Table(name = "user")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "dtype", discriminatorType = DiscriminatorType.STRING)
+@DiscriminatorValue("user")
 public class User extends Model {
     private static final long serialVersionUID = 1L;
 
@@ -26,6 +31,16 @@ public class User extends Model {
 
     @Constraints.Required
     public String lastname;
+
+    @Constraints.Required
+    public String smuID;
+
+    @Constraints.Required
+    public String email;
+
+    @Constraints.Required
+    public String role;
+
     public static Find<Long, User> find = new Find<Long, User>(){};
 
     public static User findByName(String name) {
@@ -34,8 +49,5 @@ public class User extends Model {
                 .eq("username", name)
                 .findUnique();
     }
-
-
-
 
 }
