@@ -9,10 +9,6 @@ import play.mvc.Result;
 
 public class ApplicationController extends Controller{
 
-        public Result index() {
-            return ok(views.html.index.render());
-        }
-
         public Result createApplication() {
             System.out.print("Creating Application");
             JsonNode req = request().body().asJson();

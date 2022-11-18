@@ -16,3 +16,6 @@ POST    /signup                      controllers.UserController.registerNew()
 
 POST    /createPosition              controllers.PositionController.createPosition()
 
+# Add Application
+POST    /createApplication           controllers.ApplicationController.createApplication()
+
