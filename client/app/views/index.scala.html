@@ -15,28 +15,26 @@
         <link rel="stylesheet" href="https://unpkg.com/leaflet@@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
         <script src="https://unpkg.com/leaflet@@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
     </head>
-    <body>
+    <body style ="background-color:#b9cef0">
 
         <div class="row">
-            <div class="col s12 m6">
         <header class="topbar">
-            <h1 class="focused" style="font-size: 37px;
-                color: #57a957">
+            <h1 class="focused" style="font-size: 37px; text-align: center;
+                color: black">
                 <strong>Dashboard</strong>
             </h1>
-            <p class="focused" style="font-size: 20px;
-                color: #3F51B5">@message</p>
+            <p class="focused" style="font-size: 20px; text-align: center;
+                color: #768091">@message</p>
 
         </header>
-            </div>
         </div>
 
         <div class="row">
             <div class="col s12 m6">
-                <div class="card blue-grey darken-1">
+                <div class="card indigo darken-1">
                     <div class="card-content white-text">
                         <span class="card-title">Create Position</span>
-                        <p>Create a position for TAs in your courses.</p>
+                        <p>Create a new position for TA spots in your course.</p>
                     </div>
                     <div class="card-action">
                         <a href="@routes.PositionController.createPosition()">Create</a>
@@ -47,7 +45,7 @@
 
         <div class="row">
             <div class="col s12 m6">
-                <div class="card blue-grey darken-1">
+                <div class="card indigo darken-1">
                     <div class="card-content white-text">
                         <span class="card-title">My Positions</span>
                         <p>View/edit your current positions.</p>
@@ -61,7 +59,7 @@
 
         <div class="row">
             <div class="col s12 m6">
-                <div class="card blue-grey darken-1">
+                <div class="card indigo darken-1">
                     <div class="card-content white-text">
                         <span class="card-title">Settings</span>
                         <p>Set the preferences for your available positions.</p>
