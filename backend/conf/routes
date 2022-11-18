@@ -16,3 +16,5 @@ POST    /signup                      controllers.UserController.registerNew()
 
 POST    /createPosition              controllers.PositionController.createPosition()
 
+GET     /search                      controllers.SearchController.getApplications()
+GET     /search/id/:id               controllers.SearchController.getApplicationById(id: Long)

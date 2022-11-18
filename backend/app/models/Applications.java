@@ -1,10 +1,12 @@
 package models;
 
+import com.avaje.ebean.ExpressionList;
 import com.avaje.ebean.Model;
 import play.data.validation.Constraints;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.util.List;
 
 @Entity
 public class Applications extends Model {
@@ -36,4 +38,16 @@ public class Applications extends Model {
 
     @Constraints.Required
     public String studentId;
-}
+    public static Find<Long, Applications> find = new Find<Long, Applications>(){};
+
+    public static Applications findById(Long id) {
+        return Applications.find
+            .where()
+            .eq("id", id)
+            .findUnique();
+    }
+
+    public static List<Applications> getApplications () {
+        return Applications.find.all();
+    }
+ }
