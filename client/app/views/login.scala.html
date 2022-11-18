@@ -15,22 +15,20 @@
         <link rel="stylesheet" href="https://unpkg.com/leaflet@@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
         <script src="https://unpkg.com/leaflet@@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
     </head>
-    <body>
+    <body style ="background-color:#b9cef0">
         <div class="row">
-            <div class="col s12 m6">
         <header class="topbar">
-            <h1 class="focused" style="font-size: 37px;
-                color: #57a957">
+            <h1 class="focused" style="font-size: 37px; text-align: center;
+                color: black">
                 <strong>Login</strong>
             </h1>
         </header>
-            </div>
         </div>
 
 
         <div class="row">
             <div class="card col s4 offset-s4 ">
-                <div class="card-panel">
+                <div class="card-panel h-200">
                     <form action="@routes.HomeController.loginHandler()" method="GET">
 
                         <div class="row">
@@ -54,9 +52,9 @@
                             <br>
                         }
                         <div class="row">
-                            <button id="api-search-button" class="btn col s4 offset-s4" type="submit">Submit</button>
+                            <button id="api-search-button" class="btn col s4 offset-s4" type="submit" style="border: 2px solid white">Submit</button>
                         </div>
-                        <a href="@routes.HomeController.signup()">REGISTER</a>
+                        <a href="@routes.HomeController.signup()"><div style="text-align: center">Register</div></a>
                     </form>
                 </div>
             </div>
