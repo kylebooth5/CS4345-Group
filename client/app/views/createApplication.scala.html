@@ -21,7 +21,7 @@
                 <header class="topbar">
                     <h1 class="focused" style="font-size: 37px;
                         color: #57a957">
-                        <strong>Create Position</strong>
+                        <strong>Fill out Application</strong>
                     </h1>
                 </header>
             </div>
@@ -32,14 +32,48 @@
                 <div class="card--panel">
                     <form action="@routes.ApplicationController.applicationHandler()" method="GET">
                         <div class="input-field">
-                            <input type="text" name="name" id="name" required>
-                            <label for="name">Name</label>
+                            <input type="text" name="first_name" id="first_name" required>
+                            <label for="first_name">First Name</label>
                         </div>
                         <div class="input-field">
-                            <input type="text" name="description" id="description" required>
-                            <label for="description">Description</label>
+                            <input type="text" name="last_name" id="last_name" required>
+                            <label for="last_name">Last Name</label>
                         </div>
-                        
+                        <div class="input-field">
+                            <input type="text" name="email" id="email" required>
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" name="phone" id="phone" required>
+                            <label for="phone">Phone</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" name="GPA" id="GPA" required>
+                            <label for="GPA">GPA</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" name="major" id="major" required>
+                            <label for="major">Major</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" name="year" id="year" required>
+                            <label for="year">Year</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" name="studentId" id="studentId" required>
+                            <label for="studentId">Student Id</label>
+                        </div>
+
+                        @if(authorizeMessage!= null){
+                            <div class="alert alert-primary" role="alert">
+                            @authorizeMessage
+                            </div>
+                            <br>
+                        }
+
+                        <div class="row">
+                            <button id="api-search-button" class="btn col s4 offset-s4" type="submit">Submit Info</button>
+                        </div>
 
                     </form>
                 </div>

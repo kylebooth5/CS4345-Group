@@ -21,3 +21,7 @@ POST    /createPosition              controllers.PositionController.createPositi
 
 GET     /search                      controllers.SearchController.getApplications()
 GET     /search/id/:id               controllers.SearchController.getApplicationById(id: Long)
+
+# Add Application
+POST    /createApplication           controllers.ApplicationController.createApplication()
+
