@@ -8,6 +8,9 @@ GET     /                           controllers.HomeController.index
 #Login
 POST     /login                      controllers.UserController.authenticate()
 
+# check role
+POST     /checkRole                  controllers.UserController.checkRole()
+
 
 # Add User  {"name":name, "password":password}
 POST    /signup                      controllers.UserController.registerNew()

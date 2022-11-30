@@ -60,6 +60,39 @@
                                 <label for="lastname">Last Name</label>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+
+                                <input id="smuID" name="smuID" type="text" class="validate">
+                                <label for="smuID">SMU ID</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+
+                                <input id="email" name="email" type="text" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+
+                        <!--Creates 2 checkbox options allows one selection-->
+                        <span>Account Type: </span>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <p>
+                                    <label>
+                                        <input name="role" type="radio" value="student" />
+                                        <span>Student</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input name="role" type="radio" value="professor" />
+                                        <span>Professor</span>
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
                         @if(authorizeMessage!= null){
                             <div class="alert alert-primary" role="alert">
                             @authorizeMessage

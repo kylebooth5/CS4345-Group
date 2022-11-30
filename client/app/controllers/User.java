@@ -18,6 +18,13 @@ public class User {
     private String firstname;
     private String lastname;
 
+    private String smuID;
+    private String email;
+
+    private String role;
+
+
+
     public String getUsername() {
         return username;
     }
@@ -59,6 +66,24 @@ public class User {
                 });
     }
 
+    //check user role
+    public CompletionStage<WSResponse> checkRole() {
+
+        WSClient ws = play.test.WSTestClient.newClient(9005);
+        //add username password
+        WSRequest request = ws.url("http://localhost:9005/checkRole");
+        ObjectNode res = Json.newObject();
+        //print the username
+        res.put("username", this.username);
+        res.put("password",this.password);
+        res.put("firstname",this.firstname);
+        return request.addHeader("Content-Type", "application/json")
+                .post(res)
+                .thenApply((WSResponse r) -> {
+                    return r;
+                });
+    }
+
 
 
     public  CompletionStage<WSResponse> registerUser() {
@@ -70,11 +95,24 @@ public class User {
         res.put("password",this.password);
         res.put("firstname",this.firstname);
         res.put("lastname",this.lastname);
+        res.put("smuID",this.smuID);
+        res.put("email",this.email);
+        res.put("role",this.role);
+        res.put("major","");
+        res.put("minor","");
+        res.put("gpa","");
+        res.put("year","");
+        res.put("department","");
+        res.put("courses","");
+
 
         System.out.println(username);
         System.out.println(password);
         System.out.println(firstname);
         System.out.println(lastname);
+        System.out.println(smuID);
+        System.out.println(email);
+        System.out.println(role);
 
         WSRequest request = ws.url("http://localhost:9005/signup");
         return request.addHeader("Content-Type", "application/json")
